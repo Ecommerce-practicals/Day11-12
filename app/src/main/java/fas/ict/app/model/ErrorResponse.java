@@ -3,8 +3,9 @@ package fas.ict.app.model;
 public class ErrorResponse {
 	private int statusCode;
 	private String errorMessage;
-	public ErrorResponse() {
+	public ErrorResponse(int statusCode,String errotMessage) {
 		this.errorMessage = errorMessage;
+		this.statusCode = statusCode;
 	}
 
 	public int getStatusCode() {

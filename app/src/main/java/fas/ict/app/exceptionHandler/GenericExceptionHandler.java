@@ -1,5 +1,4 @@
 package fas.ict.app.exceptionHandler;
-
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +21,7 @@ public class GenericExceptionHandler {
 	@ExceptionHandler(DuplicateKeyException.class)
 	public ResponseEntity<ErrorResponse> handleDuplicateKey(DuplicateKeyException exception) {
 		ErrorResponse errorResponce = new ErrorResponse(HttpStatus.BAD_REQUEST.value(), 
-        exception.getMessage());
+				exception.getMessage());
 		return new ResponseEntity<ErrorResponse>(errorResponce, HttpStatus.BAD_REQUEST);
 	}
 	
